@@ -1,7 +1,8 @@
 from django.views.generic import (ListView, 
                                   DetailView, 
                                   CreateView, 
-                                  UpdateView,)
+                                  UpdateView,
+                                  DeleteView,)
 from .models import Article
 
 
@@ -23,3 +24,8 @@ class ArticleUpdateView(UpdateView):
     model = Article
     template_name = 'article_update.html'
     fields = ['title', 'content']
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    template_name = 'article_delete.html'
+    success_url = '/'

@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block content %}
-    <h2>¿Estás seguro de que deseas eliminar este artículo?</h2>
+    <h2>¿Estás seguro de que deseas eliminar este artículo {{ article.title }}?</h2>
     <p><strong>{{ article.title }}</strong></p>
     <form method="post">
         {% csrf_token %}
